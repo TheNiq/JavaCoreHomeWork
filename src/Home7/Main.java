@@ -3,7 +3,7 @@ public class Main {
 
     public static void main(String[] args) {
         Dog dog = new Dog(2,6,"Black","BOB",true);
-        GuideDog guideDog = new  GuideDog(3,10,"Black","Bobic",true,false);
+        GuideDog guideDog = new  GuideDog(3,10,"Black","Bobic",true,true);
         Fish fish = new Fish(1,2,"blue","Nemo");
         Cat cat = new Cat(2,6,"White","Bars",true);
         Hamster hamster = new Hamster(1,1,"Black","Hamster",true);
@@ -24,13 +24,10 @@ public class Main {
         for (Animals animal:animals){
             System.out.println(animal.voice());
         }
+        System.out.println(guideDog.goToHome());
 
         
-        System.out.println(dog.voice());
-        System.out.println(cat.voice());
-        System.out.println(fish.voice());
-        System.out.println(guideDog.voice());
-        System.out.println(wolf.voice());
+
 
 
     }

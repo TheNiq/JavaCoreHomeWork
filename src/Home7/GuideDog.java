@@ -26,6 +26,6 @@ public class GuideDog extends Dog {
     }
     @Override
     String voice() {
-        return super.voice();
+        return super.voice() + "I can take you home.";
     }
 }
