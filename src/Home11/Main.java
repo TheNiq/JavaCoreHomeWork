@@ -45,6 +45,8 @@ public class Main {
         //System.out.println(myLinkedList.remove(1));
         myLinkedList.listIterator();
         System.out.println(myLinkedList);
-        System.out.println(linkedList.listIterator());
+        for(Object o : myLinkedList){
+            System.out.println(o);;
+        }
     }
 }

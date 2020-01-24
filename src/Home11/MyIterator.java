@@ -18,10 +18,12 @@ public class MyIterator implements  ListIterator {
     }
 
     @Override
-    public Node next() {
+    public Object next() {
+        Object current;
         if(hasNext()){
+            current = nodes.getData();
             nodes = nodes.getNext();
-            return nodes;
+            return current;
 
         }else {
             System.out.println("ERROR ");
