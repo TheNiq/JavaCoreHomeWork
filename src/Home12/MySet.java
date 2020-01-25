@@ -20,6 +20,31 @@ public class MySet implements Set {
 
     @Override
     public boolean contains(Object o) {
+        Integer oData = null;
+        if(o instanceof Integer){
+            oData = (Integer) o;
+        }
+        if(root == null){
+            return false;
+        }
+        if(oData.equals(root.getData())){
+            return true;
+        }else {
+            current = root;
+            while (current != null){
+                if(oData.equals(current.getData())){
+                    return true;
+                }
+                if(oData > current.getData()){
+                    current = current.getRight();
+
+                }
+                else if(oData < current.getData()){
+                    current = current.getLeft();
+                }
+            }
+        }
+
         return false;
     }
 
@@ -94,6 +119,9 @@ public class MySet implements Set {
 
     @Override
     public boolean addAll(Collection c) {
+        for(Object o : c){
+            add(o);
+        }
         return false;
     }
 
