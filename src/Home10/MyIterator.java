@@ -15,12 +15,12 @@ public class MyIterator implements Iterator {
     }
 
     @Override
-    public Node next() {
-        Node data;
+    public Object next() {
+        Object current;
         if(hasNext()){
-            data = nodes;
+            current = nodes.getData();
             nodes = nodes.getNext();
-            return data;
+            return current;
 
         }else {
             System.out.println("ERROR ");

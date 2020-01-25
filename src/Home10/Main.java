@@ -47,6 +47,9 @@ public class Main {
         System.out.println(Arrays.toString(myLinkedList.toArray()));
         System.out.println(myLinkedList.getLast());
         System.out.println("linkedlist " + linkedList);
+        for(Object o:myLinkedList){
+            System.out.println(o);
+        }
 
     }
 }
