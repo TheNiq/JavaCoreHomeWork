@@ -29,6 +29,7 @@ public class Main {
         System.out.println(myArray.findOrIndexO(25));
         myArray.sort();
         System.out.println(myArray);
+        System.out.println(myArray.get(2));
 
 
 

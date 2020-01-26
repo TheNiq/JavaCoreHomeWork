@@ -29,10 +29,10 @@ public class MyArray {
 
     }
     public Integer get(int index){
-        if(index > array.length || index < 1){
+        if(index >= array.length || index < 0){
             return null;
         }
-        return array[index-1];
+        return array[index];
 
     }
     public boolean contains(int num){
