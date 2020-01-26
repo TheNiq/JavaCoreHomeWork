@@ -26,13 +26,13 @@ public class Main {
 //        System.out.println(collection);
        // collection.remove(2);
         //collection.remove(4);
-        collection.remove(8);
+        collection.remove(10);
         System.out.println("collection   " + collection);
         System.out.println("collection 1 "+ collection1);
-        collection.retainAll(collection1);
+
         //collection.removeAll(collection1);
 
-        System.out.println(collection);
+        System.out.println(collection.toArray());
 
 
     }

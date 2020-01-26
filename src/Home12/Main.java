@@ -19,7 +19,7 @@ public class Main {
         for(Object o: mySet){
             System.out.println(o);
         }
-        System.out.println(mySet.contains(1));
+        System.out.println(mySet.contains(19));
 
     }
 }

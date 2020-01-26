@@ -9,11 +9,11 @@ public class Calculator {
     private static double getDouble() {
         System.out.println("Enter Numbers");
         double num = 0;
-        int flag = 0;
-        while(flag != 1){
+        boolean flag = true;
+        while(flag){
             if (scanner.hasNextDouble()) {
                 num = scanner.nextDouble();
-                flag = 1;
+                flag = false;
             }
             else {
                 System.out.println("Error");
@@ -28,12 +28,12 @@ public class Calculator {
         System.out.println("ENTER operations");
         char[] array = {47,42,43,45};
         char operation = 0;
-        int flag = 0;
-        while (flag != 1){
+        boolean flag = true;
+        while (flag){
             if (scanner.hasNext()) {
                 operation = scanner.next().charAt(0);
                 if(operation == array[0] || operation == array[1] || operation == array[2] || operation == array[3] ){
-                    flag = 1;
+                    flag = false;
                     return operation;
                 }
                 else {
@@ -48,32 +48,33 @@ public class Calculator {
     }
     private static double getResult(double num1, double num2, char operation){
         double result = 0;
-        int flag = 0;
-        while (flag != 1 )
+        boolean flag = true;
+        while (flag )
             switch (operation){
                 case '+':
                     result = num1 + num2;
-                    flag = 1;
+                    flag = false;
                     break;
                 case '-':
                     result = num1 - num2;
-                    flag = 1;
+                    flag = false;
                     break;
                 case '*':
                     result = num1 * num2;
-                    flag = 1;
+                    flag = false;
                     break;
                 case '/':
+                    if(num2 == 0){
+                        System.out.println("Error cannot be divided by 0" );
+                        flag =false;
+                        break;
+                    }
                     if(num1 > 0){
                         result = num1 / num2;
-                        flag = 1;
+                        flag = false;
                         break;
                     }
-                    else{
-                        System.out.println("Error cannot be divided by 0" );
-                        break;
 
-                    }
                 default:
                     System.out.println("rewr");
             }

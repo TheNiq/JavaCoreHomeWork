@@ -32,7 +32,9 @@ public class MyCollection implements Collection {
 
     @Override
     public Object[] toArray() {
-        return objects;
+        Object[] toArray;
+        toArray = objects;
+        return toArray;
     }
 
     @Override
@@ -49,12 +51,18 @@ public class MyCollection implements Collection {
     @Override
     public boolean remove(Object o) {
         Object [] buffer = new Object[objects.length-1];
+
         int counter = 0;
-        for(int i = 0;i < objects.length;i++){
-            if(!objects[i].equals(o)){
-                buffer[counter] = objects[i];
-                counter++;
+        if(contains(o)){
+            for(int i = 0;i < objects.length;i++){
+                if(!objects[i].equals(o)){
+                    buffer[counter] = objects[i];
+                    counter++;
+
+                }
             }
+        }else {
+            return false;
         }
         objects = buffer;
         return false;

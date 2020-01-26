@@ -44,7 +44,7 @@ public class MyIterator implements  ListIterator {
     @Override
     public Object previous() {
         if(nodes.getPrev() != null){
-            return nodes.getPrev();
+            return nodes.getPrev().getData();
         }
         return null;
     }
