@@ -139,7 +139,7 @@ public class MySet2 implements Set {
     @Override
     public boolean add(Object o) {
         if(comparator != null){
-            addIfHasComparator(o);
+            return addIfHasComparator(o);
         }
         Comparable oData = null;
         if (o instanceof Comparable ){

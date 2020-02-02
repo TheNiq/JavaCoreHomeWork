@@ -18,7 +18,7 @@ public class Main {
 
 
 
-        MySet2 mySet = new MySet2();
+        MySet2 mySet = new MySet2(comparator);
 //        mySet.add(32);
 //        mySet.add(1);
 //        mySet.add(45);
@@ -32,7 +32,8 @@ public class Main {
 //        mySet.add("string7");
 //        mySet.add("string5");
         mySet.add(job3);
-        mySet.add(job);
+        System.out.println(mySet.add(job));
+        System.out.println(mySet.add(job));
         mySet.add(job4);
         mySet.add(job2);
 
@@ -41,7 +42,7 @@ public class Main {
         for(Object o: mySet){
             System.out.println(o);
         }
-        System.out.println(mySet.contains(job4));
+        System.out.println(mySet.contains(job5));
 
     }
 }
