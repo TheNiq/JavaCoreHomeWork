@@ -20,7 +20,19 @@ public class MyMap implements Map {
     public boolean containsKey(Object key) {
         int index = indexFor(hash(key.hashCode()),table.length);
         if(table[index] != null){
-            return true;
+            if(table[index].key == key || key.equals(table[index].key)){
+                return true;
+            }
+            if(table[index].next != null){
+                Entry current = table[index];
+                while (current.next != null){
+                    current = current.next;
+                    if(current.key == key || key.equals(current.key)){
+                        return true;
+                    }
+                }
+
+            }
         }
         return false;
     }
